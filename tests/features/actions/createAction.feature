@@ -9,7 +9,7 @@ Feature: NBA Action creation
   Background: 
     Given I am in Actions page
     
-    Scenario Outline: User can create Action with basic detail
+    Scenario Outline: User can create Action with basic details
 
         When I want to create an Action
         And I want to create an Action with "<Name>" "<TemplateID>" "<Description>"

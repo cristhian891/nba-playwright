@@ -47,7 +47,6 @@ AfterStep(async function (scenario) {
         }
 
         await page.screenshot({ path: screenshotPath, fullPage: true });
-        console.log(`Screenshot saved: ${screenshotPath}`);
 
         // Save the screenshot path in scenario context for reporting
         this.attach(fs.readFileSync(screenshotPath), 'image/png');

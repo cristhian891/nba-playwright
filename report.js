@@ -14,6 +14,7 @@ const options = {
         "version": "Sonoma 14.6",
       },
       displayDuration: true,
+      openReportInBrowser: true,
     }
 };
 

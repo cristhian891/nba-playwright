@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test --require cucumber.js",
-    "generate-report": "node report.js open reports/index.html"
+    "test": "cucumber-js test --require cucumber.js && node report.js && open reports/index.html",
+    "clean-test-data": "node deleteScreenshots.js"
   },
   "keywords": [],
   "author": "",

@@ -3,7 +3,6 @@ module.exports = {
       require: [
         "tests/steps/*.js",
         "tests/hooks.js",
-        "world.js"
       ],
       paths: ["tests/features/**/*.feature"],       // Path to .feature files (fix: only .feature files)
       format: [

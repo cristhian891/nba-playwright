@@ -1,5 +1,4 @@
 const { Given } = require("@cucumber/cucumber");
-
 const LoginPage = require( "../pages/LoginPage");
 const ActionsPage = require("../pages/ActionsPage");
 

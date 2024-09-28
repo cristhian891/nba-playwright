@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test --require cucumber.js"
+    "test": "cucumber-js test --require cucumber.js",
+    "generate-report": "node report.js open reports/index.html"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +14,6 @@
     "@cucumber/cucumber": "^11.0.0",
     "@playwright/test": "^1.47.0",
     "@types/node": "^22.5.4",
-    "cucumber-html-reporter": "^7.1.1",
     "multiple-cucumber-html-reporter": "^3.7.0"
   }
 }

@@ -2,11 +2,13 @@ module.exports = {
     default: {
       require: [
         "tests/steps/*.js",
-        "tests/hooks.js"
+        "tests/hooks.js",
+        "world.js"
       ],
       paths: ["tests/features/**/*.feature"],       // Path to .feature files (fix: only .feature files)
-      //format: ['summary'],
-      
+      format: [
+        "json:reports/report.json",  
+      ],   
     },
   };
 

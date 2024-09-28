@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cucumber-js --require cucumber.conf.js"
+    "test": "cucumber-js test --require cucumber.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,8 @@
   "devDependencies": {
     "@cucumber/cucumber": "^11.0.0",
     "@playwright/test": "^1.47.0",
-    "@types/node": "^22.5.4"
+    "@types/node": "^22.5.4",
+    "cucumber-html-reporter": "^7.1.1",
+    "multiple-cucumber-html-reporter": "^3.7.0"
   }
 }

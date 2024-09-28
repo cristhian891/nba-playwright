@@ -7,6 +7,7 @@ class ActionsPage{
 
     constructor(page){
         this.page = page;
+        this.url = 'https://management.cnbal-eng.consumer-dataengapis.com/action-templates';
         this.createActionLocator = '//*[@id="root"]/div[1]/div/div/div[2]/div[2]/a';
         this.nameInputLocator = "input[name='name']";
         this.templateIDInputLocator = "input[name='id']";
@@ -32,8 +33,7 @@ class ActionsPage{
     }
 
     async checkActionPage(){
-        await page.url().includes("action-templates");
-
+        await this.page.url().includes("action-templates");
     };
 
     async checkElementText(text){

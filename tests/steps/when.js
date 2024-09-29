@@ -37,3 +37,53 @@ When('I save the action changes',async function () {
   let actionsPage = new ActionsPage(page);
   await actionsPage.saveAction();
 });
+
+When('I select {string} tab',async function (tabName) {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.selectTabinActions(tabName);
+});
+
+When('I add Snippet with Select Feature {string}',async function (feature) {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.clickOnSnippet();
+  await actionsPage.businessRuleSelectFeature(feature);
+});
+
+When('I add Rule with Schema {string}',async function (schema) {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.clickOnRule();
+  await actionsPage.businessRulesAddRule(schema);
+});
+
+When('I delete all business rules',async function () {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.deleteAllBusinessRules();
+});
+
+When('I set {string} to the inputfield BAU ranking',async function (number) {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.enterBAUranking(number);
+});
+
+When('I add {string} group for aproval',async function (groupName) {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.addGroupForApproval(groupName);
+});
+
+When('I save the group for aproval',async function () {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.clickOnSaveApprovers();
+});
+
+When('I delete {string} group for aproval',async function (groupName) {
+  // Write code here that turns the phrase above into concrete actions
+  let actionsPage = new ActionsPage(page);
+  await actionsPage.deleteGroupForApproval(groupName);
+});

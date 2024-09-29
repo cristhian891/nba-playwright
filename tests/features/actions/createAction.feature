@@ -33,5 +33,33 @@ Feature: NBA Action creation
         | AG-ActionsCrud-TEST-edited  | Action automated-edited | 
 
     Scenario: User can edit eligibility rules
+        When I look for an Action "AG-ActionsCrud"
+        And I select "Business Rules" tab
+        And I add Snippet with Select Feature "acqAddonRules"
+        And I add Rule with Schema "accountHoldings"
+        And I save the action changes
+        Then I expect toast element contains the text "Successfully saved new version"
 
+    Scenario: User can delete all eligibility rules
+        When I look for an Action "AG-ActionsCrud"
+        And I select "Business Rules" tab
+        When I delete all business rules
+        And I save the action changes
+        Then I expect toast element contains the text "Successfully saved new version"
+        And No business rules are displayed
+   
+    Scenario: User can edit model configuration
+        When I look for an Action "AG-ActionsCrud"
+        And I select "Model Configuration" tab
+        And I set "5" to the inputfield BAU ranking
+        And I save the action changes
+        Then I expect toast element contains the text "Successfully saved new version"
     
+    Scenario: User can add groups for the approval process
+        When I look for an Action "AG-ActionsCrud"
+        And I add "NAYAN" group for aproval
+        And I save the group for aproval
+        Then I expect that alert dialog contains the text "Successfully added approver group"
+        And I delete "NAYAN" group for aproval
+        And I save the group for aproval
+        Then I expect that alert dialog contains the text "Successfully added approver group"

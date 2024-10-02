@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js test --require cucumber.js && node report.js && open reports/index.html",
+    "test": "cucumber-js test --require cucumber.js ; node report.js && open reports/index.html",
     "clean-ss": "node deleteScreenshots.js"
   },
   "keywords": [],

@@ -38,6 +38,11 @@ module.exports = defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
+    {
+      name: 'API tests',
+      testMatch: '/api/*\.test\.js',
+    },
+
     //{
     //  name: 'firefox',
     //  use: { ...devices['Desktop Firefox'] },
